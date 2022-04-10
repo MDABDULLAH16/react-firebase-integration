@@ -23,7 +23,11 @@ function App() {
 
         </Route>
 
-        <Route path='/products' element={<Products></Products>}></Route>
+        <Route path='/products' element={
+          <RequerAuth>
+            <Products></Products>
+          </RequerAuth>
+        }></Route>
         <Route path='/registers' element={<Registers></Registers>} ></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
